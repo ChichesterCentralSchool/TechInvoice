@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="./Invoice.json"></script>
+		<script src="./Src/index.js"></script>
+		<link rel="stylesheet" href="./Src/index.css">
+		<title>Tech Support Invoice</title>
+	</head>
+	<body>
+		<div>
+			<img id="Logo" alt="Logo">
+			<div>
+				<h1 id="Title"></h1>
+				<h3>Device Repair</h3>
+			</div>
+			<div>
+				<h2>Invoice</h2>
+				<p>Date: <span id="InvoiceDate"></span></p>
+				<p>Invoice #: <span id="InvoiceNumber"></span></p>
+				<p>Device ID: <span id="DeviceID"></span></p>
+				<p>User Name: <span id="UserName"></span></p>
+			</div>
+		</div>
+		<div>
+			<table>
+				<tr>
+					<th>Brand/Type</th>
+					<th>Serial Number</th>
+					<th>Date Of Manufacture</th>
+					<th>MSRP</th>
+				</tr>
+				<tr>
+					<td><p id="DeviceBrand"></p></td>
+					<td><p id="DeviceSN"></p></td>
+					<td><p id="DeviceManuf"></p></td>
+					<td><p id="DeviceMSRP"></p></td>
+				</tr>
+			</table>
+		</div>
+		<div>
+			<table>
+				<tr>
+					<th>Device Top</th>
+					<th>Device Bottom</th>
+					<th>Zoomed On Damage</th>
+				</tr>
+				<tr>
+					<td><img id="DeviceTop" alt="Top"></td>
+					<td><img id="DeviceBottom" alt="Bottom"></td>
+					<td><img id="DeviceZoomed" alt="Zoomed"></td>
+				</tr>
+			</table>
+		</div>
+		<div>
+			<div>
+				<h3>Incident As Reported:</h3>
+				<p id="IncidentReported"></p>
+			</div>
+			<div>
+				<h3>Repair Notes:</h3>
+				<p id="RepairNotes"></p>
+			</div>
+			<div>
+				<h3>Itemized Cost Of Repair:</h3>
+				<table id="Itemized">
+					<tr>
+						<th>Description</th>
+						<th>Price</th>
+					</tr>
+				</table>
+				<p>Total cost of repair: $<span id="TotalPrice"></span></p>
+				<p>Covered by school: -$<span id="TotalCoverage"></span></p>
+				<p>Total amount due: $<span id="TotalDue"></span></p>
+				<h4>* Amount must be paid by: <span id="PayBy"></span> *</h4>
+				<h5>If you need assistance, please call <span id="Phone"></span> for the office.</h5>
+			</div>
+		</div>
+	</body>
+</html>

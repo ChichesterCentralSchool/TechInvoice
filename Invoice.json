@@ -1,0 +1,60 @@
+data = {
+	"Policy": {
+		"Title": "CCS - Tech Support",
+		"Phone": "(603)-798-5651",
+		"DaysToPay": 1,
+		"MustPayMax": 100
+	},
+	"Invoice": {
+		"Date":  "Jan 1, 1970",
+		"Number": 1, // NOTE: Increment by one if you have more than one incident in a day...
+		"DeviceID": "",
+		"UserName": "",
+	},
+	"Device": {
+		"Brand": "",
+		"Serial": "",
+		"manufactured": "Jan 1, 1970",
+		"MSRP": 0
+	},
+	"Images": {
+		"Logo": "./Images/Logo.png",
+		"Top": "./Images/Top.jpg",
+		"Bottom": "./Images/Bottom.jpg",
+		"Zoomed": "./Images/Zoomed.jpg"
+	},
+	"Report": {
+		"Incident": "",
+		"Notes": "",
+	},
+	"Itemized": [
+		{
+			"Description": "",
+			"Price": 0
+		},
+		{
+			"Description": "",
+			"Price": 0
+		},
+		{
+			"Description": "",
+			"Price": 0
+		},
+		{
+			"Description": "",
+			"Price": 0
+		},
+		{
+			"Description": "",
+			"Price": 0
+		},
+		{
+			"Description": "",
+			"Price": 0
+		},
+		{
+			"Description": "",
+			"Price": 0
+		}
+	]
+}
