@@ -2,7 +2,7 @@ data = {
 	"Policy": {
 		"Title": "CCS - Tech Support",
 		"Phone": "(603)-798-5651",
-		"DaysToPay": 1,
+		"DaysToPay": 40,
 		"MustPayMax": 100
 	},
 	"Invoice": {
