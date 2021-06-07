@@ -154,9 +154,15 @@ body > div:nth-of-type(4) > div:nth-of-type(3) > p:nth-of-type(3) {
 	font-weight: bolder;
 }
 
-body > div:nth-of-type(4) > div:nth-of-type(3) > h4 {
+body > div:nth-of-type(4) > div:nth-of-type(3) > h3 {
 	text-align: center;
 	margin-top: 15px;
+	font-size: 20px;
+}
+
+body > div:nth-of-type(4) > div:nth-of-type(3) > h4 {
+	text-align: center;
+	margin-top: 8px;
 	color: #e01b24;
 }
 

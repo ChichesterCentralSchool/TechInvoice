@@ -34,7 +34,7 @@ window.addEventListener("load", function(event) {
 	
 	let totalPrice = 0;
 	let itemized = document.getElementById("Itemized");
-	for(i=0; i<7; i+=1) {
+	for(i=0; i<6; i+=1) {
 		let row = itemized.insertRow(-1);
 		let description = row.insertCell(0);
 		let price = row.insertCell(1);
@@ -48,12 +48,14 @@ window.addEventListener("load", function(event) {
 		document.getElementById("TotalCoverage").innerHTML += 0;
 		document.getElementById("TotalDue").innerHTML += totalPrice;
 	} else {
-		document.getElementById("TotalCoverage").innerHTML += (totalPrice-data["Policy"]["MustPayMax"]).toFixed(2);;
+		document.getElementById("TotalCoverage").innerHTML += (totalPrice-data["Policy"]["MustPayMax"]).toFixed(2);
 		document.getElementById("TotalDue").innerHTML += data["Policy"]["MustPayMax"];
 	}
 	
 	let dueDate = new Date(data["Invoice"]["Date"]);
 	dueDate = dueDate.addDays(data["Policy"]["DaysToPay"]);
+	
+	document.getElementById("PayTo").innerHTML += data["Policy"]["PayableTo"];
 	document.getElementById("PayBy").innerHTML += dueDate.toLocaleDateString('en-US');
 	document.getElementById("Phone").innerHTML = data["Policy"]["Phone"];
 	
