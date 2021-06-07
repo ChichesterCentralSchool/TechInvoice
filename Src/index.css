@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+h1, h2, h3, h4, h5, p {
+	font-family: "Liberation Serif";
+}
+
 h3 {
 	font-size: 28px;
 	margin: 0px 0px 0px 20px;
