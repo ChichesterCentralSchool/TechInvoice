@@ -8,7 +8,8 @@ Date.prototype.addDays = function (days) {
 window.addEventListener("load", function(event) {
 	// Header HTML tags
 	document.getElementById("Logo").src = data["Images"]["Logo"];
-	document.getElementById("Title").innerHTML = data["Policy"]["Title"];
+	document.getElementById("Title").innerHTML = data["Report"]["Title"];
+	document.getElementById("Subtitle").innerHTML = data["Report"]["Subtitle"];
 	let date = new Date(data["Invoice"]["Date"]).toLocaleDateString('en-US')
 	document.getElementById("InvoiceDate").innerHTML += date;
 	date = new Date(data["Invoice"]["Date"]).toLocaleDateString('en-US').split("/");
@@ -35,9 +36,11 @@ window.addEventListener("load", function(event) {
 	
 	// Left side note HTML tags
 	document.getElementById("IncidentNotes").innerHTML = data["Report"]["Incident"];
-	document.getElementById("RepairNotes").innerHTML = data["Report"]["Repair"];
+	document.getElementById("SubNoteText").innerHTML = data["Report"]["Subtitle"];
+	document.getElementById("SubNotes").innerHTML = data["Report"]["Repair"];
 	
 	// Itemized table HTML tags
+	document.getElementById("CostOfText").innerHTML = data["Report"]["Subtitle"];
 	let totalPrice = 0;
 	let itemized = document.getElementById("Itemized");
 	for(i=0; i<6; i+=1) {

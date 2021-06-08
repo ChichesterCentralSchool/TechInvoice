@@ -1,20 +1,25 @@
 data = {
-	"Policy": {
+	"Report": {
 		"Title": "Tech Support",
-		"Phone": "(555)-555-5555",
-		"PayableTo": "Tech Department",
-		"DaysToPay": 40,
-		"MustPayMax": 100
+		"Subtitle": "Device Repair",
+		"Incident": "Explain the problem...",
+		"Repair": "Explain the solution...",
 	},
 	"Invoice": {
 		"Date":  "Jan 1, 1970",
 		"Number": 1, // NOTE: Increment by one if you have more than one incident in a day...
-		"DeviceID": "",
-		"UserName": "",
+		"DeviceID": "LocalID",
+		"UserName": "John Smith",
+	},
+	"Policy": {
+		"Phone": "(555)-555-5555",
+		"PayableTo": "Tech Department",
+		"DaysToPay": 40,
+		"MustPayMax": 75
 	},
 	"Device": {
-		"Brand": "",
-		"Serial": "",
+		"Brand": "FooBar 300",
+		"Serial": "ABC...123",
 		"manufactured": "Jan 1, 1970",
 		"MSRP": 0
 	},
@@ -33,14 +38,10 @@ data = {
 			"Title": "Zoomed On Primary Damage"
 		}
 	},
-	"Report": {
-		"Incident": "",
-		"Repair": "",
-	},
 	"Itemized": [
 		{
-			"Description": "",
-			"Price": 0
+			"Description": "Thing thats needed...",
+			"Price": 100
 		},
 		{
 			"Description": "",
