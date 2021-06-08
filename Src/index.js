@@ -34,8 +34,8 @@ window.addEventListener("load", function(event) {
 	document.getElementById("DeviceRightPath").src = data["Images"]["Right"]["Path"];
 	
 	// Left side note HTML tags
-	document.getElementById("IncidentReported").innerHTML = data["Report"]["Incident"];
-	document.getElementById("RepairNotes").innerHTML = data["Report"]["Notes"];
+	document.getElementById("IncidentNotes").innerHTML = data["Report"]["Incident"];
+	document.getElementById("RepairNotes").innerHTML = data["Report"]["Repair"];
 	
 	// Itemized table HTML tags
 	let totalPrice = 0;
