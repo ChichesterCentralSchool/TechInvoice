@@ -20,19 +20,24 @@ data = {
 	},
 	"Images": {
 		"Logo": "./Images/Logo.png",
-		"Top": "./Images/Top.jpg",
-		"Bottom": "./Images/Bottom.jpg",
-		"Zoomed": "./Images/Zoomed.jpg"
+		"Left": {
+			"Path": "./Images/Top.jpg",
+			"Title": "Device Top"
+		},
+		"Middle": {
+			"Path": "./Images/Bottom.jpg",
+			"Title": "Device Bottom"
+		},
+		"Right": {
+			"Path": "./Images/Zoomed.jpg",
+			"Title": "Zoomed On Primary Damage"
+		}
 	},
 	"Report": {
 		"Incident": "",
 		"Notes": "",
 	},
 	"Itemized": [
-		{
-			"Description": "",
-			"Price": 0
-		},
 		{
 			"Description": "",
 			"Price": 0

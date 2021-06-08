@@ -1,3 +1,4 @@
+// Adds days on to a date
 Date.prototype.addDays = function (days) {
   let date = new Date(this.valueOf());
   date.setDate(date.getDate() + days);
@@ -5,7 +6,7 @@ Date.prototype.addDays = function (days) {
 }
 
 window.addEventListener("load", function(event) {
-	
+	// Header HTML tags
 	document.getElementById("Logo").src = data["Images"]["Logo"];
 	document.getElementById("Title").innerHTML = data["Policy"]["Title"];
 	let date = new Date(data["Invoice"]["Date"]).toLocaleDateString('en-US')
@@ -19,19 +20,26 @@ window.addEventListener("load", function(event) {
 	document.getElementById("DeviceID").innerHTML += data["Invoice"]["DeviceID"];
 	document.getElementById("UserName").innerHTML += data["Invoice"]["UserName"];
 	
+	// Device info HTML tags
 	document.getElementById("DeviceBrand").innerHTML += data["Device"]["Brand"];
 	document.getElementById("DeviceSN").innerHTML += data["Device"]["Serial"];
 	date = new Date(data["Device"]["manufactured"]).toLocaleDateString('en-US')
 	document.getElementById("DeviceManuf").innerHTML += date;
 	document.getElementById("DeviceMSRP").innerHTML += "$" + data["Device"]["MSRP"];
 	
-	document.getElementById("DeviceTop").src = data["Images"]["Top"];
-	document.getElementById("DeviceBottom").src = data["Images"]["Bottom"];
-	document.getElementById("DeviceZoomed").src = data["Images"]["Zoomed"];
+	// Device image HTML tags
+	document.getElementById("DeviceLeftTitle").innerHTML = data["Images"]["Left"]["Title"];
+	document.getElementById("DeviceMiddleTitle").innerHTML = data["Images"]["Middle"]["Title"];
+	document.getElementById("DeviceRightTitle").innerHTML = data["Images"]["Right"]["Title"];
+	document.getElementById("DeviceLeftPath").src = data["Images"]["Left"]["Path"];
+	document.getElementById("DeviceMiddlePath").src = data["Images"]["Middle"]["Path"];
+	document.getElementById("DeviceRightPath").src = data["Images"]["Right"]["Path"];
 	
+	// Left side note HTML tags
 	document.getElementById("IncidentReported").innerHTML = data["Report"]["Incident"];
 	document.getElementById("RepairNotes").innerHTML = data["Report"]["Notes"];
 	
+	// Itemized table HTML tags
 	let totalPrice = 0;
 	let itemized = document.getElementById("Itemized");
 	for(i=0; i<6; i+=1) {
@@ -39,10 +47,13 @@ window.addEventListener("load", function(event) {
 		let description = row.insertCell(0);
 		let price = row.insertCell(1);
 		description.innerHTML = data["Itemized"][i]["Description"];
-		price.innerHTML = "$" + data["Itemized"][i]["Price"];
+		if(data["Itemized"][i]["Price"] != 0) {
+			price.innerHTML = "$" + data["Itemized"][i]["Price"];
+		}
 		totalPrice += data["Itemized"][i]["Price"];
 	}
 	
+	// Cost of repair table HTML tags
 	document.getElementById("TotalPrice").innerHTML += totalPrice;
 	if(totalPrice <= data["Policy"]["MustPayMax"]) {
 		document.getElementById("TotalCoverage").innerHTML += 0;
@@ -52,9 +63,9 @@ window.addEventListener("load", function(event) {
 		document.getElementById("TotalDue").innerHTML += data["Policy"]["MustPayMax"];
 	}
 	
+	// Repair policy HTML tags
 	let dueDate = new Date(data["Invoice"]["Date"]);
 	dueDate = dueDate.addDays(data["Policy"]["DaysToPay"]);
-	
 	document.getElementById("PayTo").innerHTML += data["Policy"]["PayableTo"];
 	document.getElementById("PayBy").innerHTML += dueDate.toLocaleDateString('en-US');
 	document.getElementById("Phone").innerHTML = data["Policy"]["Phone"];
