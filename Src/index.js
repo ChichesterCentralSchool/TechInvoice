@@ -11,12 +11,10 @@ window.addEventListener("load", function(event) {
 	document.getElementById("Title").innerHTML = data["Policy"]["Title"];
 	let date = new Date(data["Invoice"]["Date"]).toLocaleDateString('en-US')
 	document.getElementById("InvoiceDate").innerHTML += date;
+	date = new Date(data["Invoice"]["Date"]).toLocaleDateString('en-US').split("/");
+	date = date[0] + date[1] + date[2].substring(2, 4);
 	let invoiceNumber = data["Invoice"]["Number"].toString();
-	while(invoiceNumber.length < 2) {
-		invoiceNumber = "0" + invoiceNumber;
-	}
-	date = new Date(data["Invoice"]["Date"]).toLocaleDateString('en-US').replaceAll("/","");
-	document.getElementById("InvoiceNumber").innerHTML += date  + invoiceNumber;
+	document.getElementById("InvoiceNumber").innerHTML += date + invoiceNumber;
 	document.getElementById("DeviceID").innerHTML += data["Invoice"]["DeviceID"];
 	document.getElementById("UserName").innerHTML += data["Invoice"]["UserName"];
 	
