@@ -5,7 +5,7 @@ h1, h2, h3, h4, h5, p {
 }
 
 h3 {
-	font-size: 28px;
+	font-size: 22px;
 	margin: 0px 0px 0px 20px;
 }
 
@@ -100,8 +100,8 @@ body > div:nth-of-type(3) > table img {
 body > div:nth-of-type(4) {
 	display: grid;
 	grid-template-columns: 300px auto;
-	grid-template-rows: 225px auto;
-	grid-gap: 14px 20px;
+	grid-template-rows: 240px auto;
+	grid-gap: 3px 20px;
 	padding: 15px 0 15px 0;
 }
 
