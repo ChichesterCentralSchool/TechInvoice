@@ -5,9 +5,15 @@ Date.prototype.addDays = function (days) {
   return date;
 }
 
+function set_if_blank(imageUrl) {
+	if (imageUrl == "")
+		return "./Src/Blank.jpg";
+	return imageUrl;
+}
+
 window.addEventListener("load", function(event) {
 	// Header HTML tags
-	document.getElementById("Logo").src = data["Images"]["Logo"];
+	document.getElementById("Logo").src = set_if_blank(data["Images"]["Logo"]);
 	document.getElementById("Title").innerHTML = data["Report"]["Title"];
 	document.getElementById("Subtitle").innerHTML = data["Report"]["Subtitle"];
 	let date = new Date(data["Invoice"]["Date"]).toLocaleDateString('en-US')
@@ -30,9 +36,9 @@ window.addEventListener("load", function(event) {
 	document.getElementById("DeviceLeftTitle").innerHTML = data["Images"]["Left"]["Title"];
 	document.getElementById("DeviceMiddleTitle").innerHTML = data["Images"]["Middle"]["Title"];
 	document.getElementById("DeviceRightTitle").innerHTML = data["Images"]["Right"]["Title"];
-	document.getElementById("DeviceLeftPath").src = data["Images"]["Left"]["Path"];
-	document.getElementById("DeviceMiddlePath").src = data["Images"]["Middle"]["Path"];
-	document.getElementById("DeviceRightPath").src = data["Images"]["Right"]["Path"];
+	document.getElementById("DeviceLeftPath").src = set_if_blank(data["Images"]["Left"]["Path"]);
+	document.getElementById("DeviceMiddlePath").src = set_if_blank(data["Images"]["Middle"]["Path"]);
+	document.getElementById("DeviceRightPath").src = set_if_blank(data["Images"]["Right"]["Path"]);
 	
 	// Left side note HTML tags
 	document.getElementById("IncidentNotes").innerHTML = data["Report"]["Incident"];

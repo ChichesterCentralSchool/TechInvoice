@@ -24,18 +24,18 @@ data = {
 		"MSRP": 0
 	},
 	"Images": {
-		"Logo": "./Images/Logo.png",
+		"Logo": "",
 		"Left": {
-			"Path": "./Images/Top.jpg",
-			"Title": "Device Top"
+			"Path": "",
+			"Title": "Left"
 		},
 		"Middle": {
-			"Path": "./Images/Bottom.jpg",
-			"Title": "Device Bottom"
+			"Path": "",
+			"Title": "Middle"
 		},
 		"Right": {
-			"Path": "./Images/Zoomed.jpg",
-			"Title": "Zoomed On Primary Damage"
+			"Path": "",
+			"Title": "Right"
 		}
 	},
 	"Itemized": [
