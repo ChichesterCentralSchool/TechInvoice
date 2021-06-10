@@ -6,21 +6,21 @@ data = {
 		"Repair": "Explain the solution...",
 	},
 	"Invoice": {
-		"Date":  "Jan 1, 1970",
+		"Date":  "",
 		"Number": 1, // NOTE: Increment by one if you have more than one incident in a day...
-		"DeviceID": "LocalID",
-		"UserName": "John Smith",
+		"DeviceID": "",
+		"UserName": "",
 	},
 	"Policy": {
-		"Phone": "(555)-555-5555",
-		"PayableTo": "Tech Department",
-		"DaysToPay": 40,
-		"MustPayMax": 75
+		"Phone": "",
+		"PayableTo": "",
+		"DaysToPay": 0,
+		"MustPayMax": 0
 	},
 	"Device": {
-		"Brand": "FooBar 300",
-		"Serial": "ABC...123",
-		"manufactured": "Jan 1, 1970",
+		"Brand": "",
+		"Serial": "",
+		"manufactured": "",
 		"MSRP": 0
 	},
 	"Images": {
@@ -40,8 +40,8 @@ data = {
 	},
 	"Itemized": [
 		{
-			"Description": "Thing thats needed...",
-			"Price": 100
+			"Description": "",
+			"Price": 0
 		},
 		{
 			"Description": "",
