@@ -42,7 +42,7 @@ window.addEventListener("load", function(event) {
 	let date = new Date(set_date(data["Invoice"]["Date"])).toLocaleDateString('en-US')
 	document.getElementById("InvoiceDate").innerHTML += date;
 	date = new Date(set_date(data["Invoice"]["Date"])).toLocaleDateString('en-US');
-	let invoiceNumber = date + data["Invoice"]["UserName"];
+	let invoiceNumber = date + data["Invoice"]["DeviceID"] + data["Invoice"]["UserName"];
 	document.getElementById("InvoiceNumber").innerHTML += hash_str(invoiceNumber);
 	document.getElementById("DeviceID").innerHTML += data["Invoice"]["DeviceID"];
 	document.getElementById("UserName").innerHTML += data["Invoice"]["UserName"];
