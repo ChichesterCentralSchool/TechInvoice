@@ -82,7 +82,7 @@ window.addEventListener("load", function(event) {
 
 	// Repair policy HTML tags
 	date = new Date(set_date(data["Invoice"]["Date"]));
-	date = dueDate.addDays(data["Policy"]["DaysToPay"]);
+	date = date.addDays(data["Policy"]["DaysToPay"]);
 	document.getElementById("PayTo").innerHTML += data["Policy"]["PayableTo"];
 	document.getElementById("PayBy").innerHTML += date.toLocaleDateString('en-US');
 	document.getElementById("Phone").innerHTML = data["Policy"]["Phone"];
