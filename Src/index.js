@@ -75,7 +75,9 @@ window.addEventListener("load", function(event) {
 		let row = itemized.insertRow(-1);
 		let description = row.insertCell(0);
 		let price = row.insertCell(1);
-		description.innerHTML = data["Itemized"][i]["Description"];
+		description.innerHTML =
+			"<a href='"+ data["Itemized"][i]["Link"] + "'>"
+			+ data["Itemized"][i]["Description"] + "</a>";
 		if(data["Itemized"][i]["Price"] != 0) {
 			price.innerHTML = "$" + data["Itemized"][i]["Price"];
 		}
