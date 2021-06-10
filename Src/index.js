@@ -19,6 +19,19 @@ function set_date(date) {
 	return date;
 }
 
+// Create an hash number using a string
+function hash_str(string) {
+	var hash = 0;
+	if (string.length == 0)
+		return hash;
+	for (i = 0 ; i<string.length; i++) {
+		ch = string.charCodeAt(i);
+		hash = ((hash << 5) - hash) + ch;
+		hash = hash & hash;
+	}
+	return Math.abs(hash);
+}
+
 // Run when the page is loaded
 window.addEventListener("load", function(event) {
 
@@ -28,10 +41,9 @@ window.addEventListener("load", function(event) {
 	document.getElementById("Subtitle").innerHTML = data["Report"]["Subtitle"];
 	let date = new Date(set_date(data["Invoice"]["Date"])).toLocaleDateString('en-US')
 	document.getElementById("InvoiceDate").innerHTML += date;
-	date = new Date(set_date(data["Invoice"]["Date"])).toLocaleDateString('en-US').split("/");
-	date = date[0] + date[1] + date[2].substring(2, 4);
-	let invoiceNumber = data["Invoice"]["Number"].toString();
-	document.getElementById("InvoiceNumber").innerHTML += date + invoiceNumber;
+	date = new Date(set_date(data["Invoice"]["Date"])).toLocaleDateString('en-US');
+	let invoiceNumber = date + data["Invoice"]["UserName"];
+	document.getElementById("InvoiceNumber").innerHTML += hash_str(invoiceNumber);
 	document.getElementById("DeviceID").innerHTML += data["Invoice"]["DeviceID"];
 	document.getElementById("UserName").innerHTML += data["Invoice"]["UserName"];
 

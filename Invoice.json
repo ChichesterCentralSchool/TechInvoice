@@ -7,7 +7,6 @@ data = {
 	},
 	"Invoice": {
 		"Date":  "",
-		"Number": 1, // NOTE: Increment by one if you have more than one incident in a day...
 		"DeviceID": "",
 		"UserName": "",
 	},
