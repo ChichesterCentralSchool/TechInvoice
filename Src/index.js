@@ -8,7 +8,7 @@ Date.prototype.addDays = function (days) {
 // Set images to Blank.jpg if no URL is given
 function set_image(imageUrl) {
 	if (imageUrl == "")
-		return "./Src/Blank.jpg";
+		return "./Src/Blank.png";
 	return imageUrl;
 }
 
@@ -32,9 +32,25 @@ function hash_str(string) {
 	return Math.abs(hash);
 }
 
+// Add CSS to the header of the document
+function css_injector(code) {
+	let styleSheet = document.createElement("style");
+	styleSheet.type = "text/css";
+	styleSheet.innerText = code;
+	document.head.appendChild(styleSheet);
+}
+
 // Run when the page is loaded
 window.addEventListener("load", function(event) {
 
+	// Set page colors
+	css_injector("#Body {background-color: " + data["Theme"]["Body"] + "}");
+	css_injector("#Header {background-color: " + data["Theme"]["Header"] + "}");
+	css_injector("#IncidentNotes {background-color: " + data["Theme"]["Notes"] + "}");
+	css_injector("#SubNotes {background-color: " + data["Theme"]["Notes"] + "}");
+	css_injector("tr:nth-child(even) {background-color: " + data["Theme"]["Table"]["Even"] + "}");
+	css_injector("tr:nth-child(odd) {background-color: " + data["Theme"]["Table"]["Odd"] + "}");
+	
 	// Header HTML tags
 	document.getElementById("Logo").src = set_image(data["Images"]["Logo"]);
 	document.getElementById("Title").innerHTML = data["Report"]["Title"];

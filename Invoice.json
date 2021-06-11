@@ -1,4 +1,13 @@
 data = {
+	"Theme": {
+		"Header": "#FF000010",
+		"Body": "#FF000005",
+		"Notes": "#FF000005",
+		"Table": {
+			"Even": "#FF000010",
+			"Odd": "#FF000005"
+		}
+	},
 	"Report": {
 		"Title": "Tech Support",
 		"Subtitle": "Device Repair",

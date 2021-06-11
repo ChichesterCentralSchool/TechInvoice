@@ -9,73 +9,75 @@
 		<title>Tech Support Invoice</title>
 	</head>
 	<body>
-		<div>
-			<img id="Logo" alt="Logo">
-			<div>
-				<h1 id="Title"></h1>
-				<h3 id="Subtitle"></h3>
+		<div id="Body">
+			<div id="Header">
+				<img id="Logo" alt="Logo">
+				<div>
+					<h1 id="Title"></h1>
+					<h3 id="Subtitle"></h3>
+				</div>
+				<div>
+					<h2>Invoice</h2>
+					<p>Date: <span id="InvoiceDate"></span></p>
+					<p>Invoice #: <span id="InvoiceNumber"></span></p>
+					<p>Device ID: <span id="DeviceID"></span></p>
+					<p>User: <span id="UserName"></span></p>
+				</div>
 			</div>
 			<div>
-				<h2>Invoice</h2>
-				<p>Date: <span id="InvoiceDate"></span></p>
-				<p>Invoice #: <span id="InvoiceNumber"></span></p>
-				<p>Device ID: <span id="DeviceID"></span></p>
-				<p>User: <span id="UserName"></span></p>
-			</div>
-		</div>
-		<div>
-			<table>
-				<tr>
-					<th>Brand/Type</th>
-					<th>Serial Number</th>
-					<th>Date Of Manufacture</th>
-					<th>MSRP</th>
-				</tr>
-				<tr>
-					<td><p id="DeviceBrand"></p></td>
-					<td><p id="DeviceSN"></p></td>
-					<td><p id="DeviceManuf"></p></td>
-					<td><p id="DeviceMSRP"></p></td>
-				</tr>
-			</table>
-		</div>
-		<div>
-			<table>
-				<tr>
-					<th><p id="DeviceLeftTitle"></p></th>
-					<th><p id="DeviceMiddleTitle"></p></th>
-					<th><p id="DeviceRightTitle"></p></th>
-				</tr>
-				<tr>
-					<td><img id="DeviceLeftPath" alt="Left"></td>
-					<td><img id="DeviceMiddlePath" alt="Middle"></td>
-					<td><img id="DeviceRightPath" alt="Right"></td>
-				</tr>
-			</table>
-		</div>
-		<div>
-			<div>
-				<h3>Incident Notes:</h3>
-				<p id="IncidentNotes"></p>
-			</div>
-			<div>
-				<h3><span id="SubNoteText"></span> Notes:</h3>
-				<p id="SubNotes"></p>
-			</div>
-			<div>
-				<h3>Itemized Cost Of <span id="CostOfText"></span>:</h3>
-				<table id="Itemized">
+				<table>
 					<tr>
-						<th><p>Description</p></th>
-						<th><p>Price</p></th>
+						<th>Brand/Type</th>
+						<th>Serial Number</th>
+						<th>Date Of Manufacture</th>
+						<th>MSRP</th>
+					</tr>
+					<tr>
+						<td><p id="DeviceBrand"></p></td>
+						<td><p id="DeviceSN"></p></td>
+						<td><p id="DeviceManuf"></p></td>
+						<td><p id="DeviceMSRP"></p></td>
 					</tr>
 				</table>
-				<p>Total cost of repair: $<span id="TotalPrice"></span></p>
-				<p>Covered by school: -$<span id="TotalCoverage"></span></p>
-				<p>Total amount due: $<span id="TotalDue"></span></p>
-				<h3>Please make check payable to: <span id="PayTo"></span></h3>
-				<h4>* Amount must be paid by <span id="PayBy"></span> *</h4>
-				<h5>If you need assistance, please call <span id="Phone"></span> for the office.</h5>
+			</div>
+			<div>
+				<table>
+					<tr>
+						<th><p id="DeviceLeftTitle"></p></th>
+						<th><p id="DeviceMiddleTitle"></p></th>
+						<th><p id="DeviceRightTitle"></p></th>
+					</tr>
+					<tr>
+						<td><img id="DeviceLeftPath" alt="Left"></td>
+						<td><img id="DeviceMiddlePath" alt="Middle"></td>
+						<td><img id="DeviceRightPath" alt="Right"></td>
+					</tr>
+				</table>
+			</div>
+			<div>
+				<div>
+					<h3>Incident Notes:</h3>
+					<p id="IncidentNotes"></p>
+				</div>
+				<div>
+					<h3><span id="SubNoteText"></span> Notes:</h3>
+					<p id="SubNotes"></p>
+				</div>
+				<div>
+					<h3>Itemized Cost Of <span id="CostOfText"></span>:</h3>
+					<table id="Itemized">
+						<tr>
+							<th><p>Description</p></th>
+							<th><p>Price</p></th>
+						</tr>
+					</table>
+					<p>Total cost of repair: $<span id="TotalPrice"></span></p>
+					<p>Covered by school: -$<span id="TotalCoverage"></span></p>
+					<p>Total amount due: $<span id="TotalDue"></span></p>
+					<h3>Please make check payable to: <span id="PayTo"></span></h3>
+					<h4>* Amount must be paid by <span id="PayBy"></span> *</h4>
+					<h5>If you need assistance, please call <span id="Phone"></span> for the office.</h5>
+				</div>
 			</div>
 		</div>
 	</body>
