@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+a {
+	color: inherit;
+	text-decoration: inherit;
+}
+
+h1, h2, h3, h4, h5, p {
+	font-family: "Liberation Serif";
+}
+
+h3 {
+	font-size: 22px;
+	margin: 0px 0px 0px 20px;
+}
+
+h4 {
+	font-size: 21px;
+	margin: 0px 0px 0px 0px;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table p {
+	margin: 0px;
+	height: 15px;
+}
+
+td, th {
+	border: 1px solid #9a9996;
+	text-align: left;
+	padding: 8px;
+	height: 18px;
+}
+
+tr:nth-child(even) {
+	background-color: #dddddd;
+}
+
+body {
+	margin: auto;
+	width: 8.5in;
+	height: 22in;
+}

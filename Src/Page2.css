@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+#Page2 {
+	height: 11.04in;
+	border: 1px solid black;
+	
+}
+
+#Page2 > div {
+	width: 250px;
+	margin: auto;
+	margin-top: 50px;
+}
+
+#Page2 > div > h3 {
+	margin-left: 0px;
+	margin-bottom: 15px;
+}
+
+#Page2 > div > table {
+	width: 100%;
+}
+
+#Page2 > div > table tr td p {
+	text-align:right;
+	height: 30px;
+}

@@ -5,11 +5,13 @@
 		<meta charset="UTF-8">
 		<script src="./Invoice.json"></script>
 		<script src="./Src/index.js"></script>
-		<link rel="stylesheet" href="./Src/index.css">
+		<link rel="stylesheet" href="./Src/Shared.css">
+		<link rel="stylesheet" href="./Src/Page1.css">
+		<link rel="stylesheet" href="./Src/Page2.css">
 		<title>Tech Support Invoice</title>
 	</head>
 	<body>
-		<div id="Body">
+		<div id="Page1">
 			<div id="Header">
 				<img id="Logo" alt="Logo">
 				<div>
@@ -79,6 +81,23 @@
 					<h5>If you need assistance, please call <span id="Phone"></span> for the office.</h5>
 				</div>
 			</div>
+		</div>
+		<div id="Page2">
+			<div>
+				<h3>Checklist For Admin:</h3>
+				<table>
+					<tr>
+						<th><p>Steps</p></th>
+						<th><p>Completed</p></th>
+					</tr>
+					<tr><td><p>Device Turned In</p></td><th></th></tr>
+					<tr><td><p>Invoice Was Sent</p></td><th></th></tr>
+					<tr><td><p>Account Due Is Paid</p></td><th></th></tr>
+					<tr><td><p>Have Device Parts</p></td><th></th></tr>
+					<tr><td><p>Device Is Fixed</p></td><th></th></tr>
+					<tr><td><p>Device Is Returned</p></td><th></th></tr>
+				</table>
+			</div>	
 		</div>
 	</body>
 </html>
