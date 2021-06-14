@@ -56,9 +56,15 @@
 	margin: 0 0 0 20px;
 }
 
+#Page1 > div:nth-of-type(3) > table tr td {
+	text-align: center;
+	min-width: 241px;
+	min-Height: 241px;
+}
+
 #Page1 > div:nth-of-type(3) > table img {
-	width: 241px;
-	Height: 241px;
+	max-width: 241px;
+	max-Height: 241px;
 }
 
 #Page1 > div:nth-of-type(4) {

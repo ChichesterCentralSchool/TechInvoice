@@ -1,11 +1,11 @@
 data = {
 	"Theme": {
-		"Header": "#FF000010",
-		"Body": "#FF000005",
-		"Notes": "#FF000005",
+		"Header": "#FF000020",
+		"Body": "#FF000015",
+		"Notes": "#FF000015",
 		"Table": {
-			"Even": "#FF000010",
-			"Odd": "#FF000005"
+			"Even": "#FF000020",
+			"Odd": "#FF000015"
 		}
 	},
 	"Report": {
