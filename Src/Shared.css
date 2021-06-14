@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+img {
+	mix-blend-mode: multiply;
+}
+
 a {
 	color: inherit;
 	text-decoration: inherit;

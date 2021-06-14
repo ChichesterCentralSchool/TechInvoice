@@ -111,10 +111,15 @@ window.addEventListener("load", function(event) {
 	}
 
 	// Repair policy HTML tags
-	date = new Date(set_date(data["Invoice"]["Date"]));
-	date = date.addDays(data["Policy"]["DaysToPay"]);
-	document.getElementById("PayTo").innerHTML += data["Policy"]["PayableTo"];
-	document.getElementById("PayBy").innerHTML += date.toLocaleDateString('en-US');
+	if (data["Policy"]["MustPayMax"] != 0) {
+		date = new Date(set_date(data["Invoice"]["Date"]));
+		date = date.addDays(data["Policy"]["DaysToPay"]);
+		document.getElementById("PayTo").innerHTML += data["Policy"]["PayableTo"];
+		document.getElementById("PayBy").innerHTML += date.toLocaleDateString('en-US');
+	} else {
+		document.getElementById("PayToText").innerHTML = data["Policy"]["PayableTo"];
+		document.getElementById("PayByText").innerHTML = "* No Action Required *";
+	}
 	document.getElementById("Phone").innerHTML = data["Policy"]["Phone"];
 
 });
