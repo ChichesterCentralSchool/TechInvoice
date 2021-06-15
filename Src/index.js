@@ -9,7 +9,7 @@ Date.prototype.addDays = function (days) {
 function set_image(imageUrl) {
 	if (imageUrl == "")
 		return "./Src/Blank.png";
-	return imageUrl;
+	return "./Images/" + imageUrl;
 }
 
 // Set dates to 1/1/1970 if no date is given
@@ -95,7 +95,7 @@ window.addEventListener("load", function(event) {
 			"<a href='"+ data["Itemized"][i]["Link"] + "'>"
 			+ data["Itemized"][i]["Description"] + "</a>";
 		if(data["Itemized"][i]["Price"] != 0) {
-			price.innerHTML = "$" + data["Itemized"][i]["Price"];
+			price.innerHTML = "$" + data["Itemized"][i]["Price"].toFixed(2);
 		}
 		totalPrice += data["Itemized"][i]["Price"];
 	}
